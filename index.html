@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f8f5">
+  <meta name="description" content="月・週・日を見渡せる、端末内に予定を保存する手帖。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="日々の手帖">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" href="./icon-192.png">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>日々の手帖</title>
+</head>
+<body>
+  <div class="app" id="app" aria-busy="true">
+    <aside class="sidebar" id="sidebar" aria-label="手帖のメニュー"></aside>
+    <main class="workspace" id="main" aria-label="日々の手帖">
+      <p class="loading">手帖を開いています…</p>
+    </main>
+    <nav class="bottom-nav" id="bottom-nav" aria-label="表示切り替え"></nav>
+  </div>
+  <div role="status" id="notice" class="notice" hidden></div>
+  <dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+  <noscript>この手帖を使うにはJavaScriptをオンにしてください。</noscript>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>
